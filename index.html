@@ -398,138 +398,78 @@
   .burger.is-open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
   .burger.is-open span:nth-child(2){opacity:0;}
   .burger.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-  /* ===== Better Mobile Responsive ===== */
-
-@media (max-width: 768px){
-
-  .container{
-    padding:0 18px;
-  }
-
-  .hero{
-    min-height:100vh;
-    padding:120px 0 80px;
-  }
-
-  .hero-media img{
-    object-position:center center;
-    transform:scale(1.02);
-  }
-
-  .hero-ring{
-    width:260px;
-    height:260px;
-  }
-
-  .hero h1{
-    font-size:38px;
-    line-height:1.15;
-  }
-
-  .hero p.sub{
-    font-size:15px;
-    max-width:100%;
-    padding:0 10px;
-  }
-
-  .btn-row{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .btn{
-    width:100%;
-    max-width:280px;
-    justify-content:center;
-  }
-
-  .head-row{
-    margin-bottom:40px;
-  }
-
-  .head-row h2{
-    font-size:32px;
-  }
-
-  .about-stats{
-    grid-template-columns:1fr;
-    gap:20px;
-    text-align:center;
-  }
-
-  .stat strong{
-    font-size:36px;
-  }
-
-  .pkg-card{
-    padding:35px 25px;
-  }
-
-  .pkg-price{
-    font-size:38px;
-  }
-
-  .contact-grid{
-    gap:40px;
-  }
-
-  .info-card{
-    padding:25px;
-  }
-
-  .foot-bottom{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .whatsapp-fab{
-    width:52px;
-    height:52px;
-    bottom:20px;
-    right:20px;
-  }
+ /* ===== ADDITIONAL MOBILE FIXES ===== */
+@media (max-width: 760px){
+  /* Hero ring — 540px se chhota karo taaki overflow na ho */
+  .hero-ring{width:280px;height:280px;}
+  
+  /* Section padding kam karo */
+  .section{padding:72px 0;}
+  
+  /* Hero sub-text aur buttons */
+  .hero p.sub{font-size:15px;padding:0 10px;}
+  .btn{padding:14px 24px;font-size:12.5px;}
+  
+  /* Service cards compact */
+  .service-card{padding:34px 24px;}
+  
+  /* Portfolio filters horizontally scroll hon — wrap na hon */
+  .filters{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;
+           padding-bottom:8px;-webkit-overflow-scrolling:touch;}
+  .filters::-webkit-scrollbar{display:none;}
+  .filter-btn{flex-shrink:0;}
+  
+  /* Testimonial cards compact */
+  .test-card{padding:28px 22px;}
+  .test-quote{font-size:17px;}
+  
+  /* Package price chhota karo */
+  .pkg-price{font-size:36px;}
+  .pkg-card{padding:36px 26px;}
+  .pkg-grid{max-width:100%;}
+  
+  /* About stats — 2 column mobile par */
+  .about-stats{grid-template-columns:repeat(2,1fr);gap:16px;}
+  .stat strong{font-size:34px;}
+  
+  /* Why items spacing */
+  .why-item{padding:22px 0 !important;}
+  
+  /* Contact info card */
+  .info-card{padding:22px 18px;}
+  
+  /* Footer bottom — column mein stack karo */
+  .foot-bottom{flex-direction:column;text-align:center;gap:6px;}
+  
+  /* Heading sizes */
+  .head-row{margin-bottom:42px;}
+  .head-row h2{font-size:clamp(26px,8vw,36px);}
+  
+  /* WhatsApp FAB chhota */
+  .whatsapp-fab{width:50px;height:50px;bottom:20px;right:16px;}
+  .whatsapp-fab svg{width:24px;height:24px;}
+  
+  /* Logo text */
+  .logo-text strong{font-size:17px;}
+  
+  /* About image height */
+  .about-media img{height:300px;}
+  
+  /* Container padding reduce */
+  .container{padding:0 18px;}
+  
+  /* Lightbox mobile adjustments */
+  .lightbox{padding:16px;}
+  .lb-close{top:12px;right:12px;}
+  .lb-prev{left:8px;}
+  .lb-next{right:8px;}
+  .lightbox img{max-height:70vh;}
 }
 
-
-/* Small Phones */
-@media (max-width: 480px){
-
-  .hero h1{
-    font-size:32px;
-  }
-
-  .eyebrow{
-    font-size:10px;
-    letter-spacing:.2em;
-  }
-
-  .head-row h2{
-    font-size:28px;
-  }
-
-  .service-card{
-    padding:32px 24px;
-  }
-
-  .test-card{
-    padding:28px 22px;
-  }
-
-  .pkg-card{
-    padding:30px 20px;
-  }
-
-  .pkg-price{
-    font-size:34px;
-  }
-
-  .about-media img{
-    height:280px;
-  }
-
-  .mobile-menu a{
-    font-size:22px;
-  }
+/* Very small screens (400px se chhote) */
+@media (max-width: 400px){
+  .hero h1{font-size:30px;}
+  .about-stats{grid-template-columns:1fr 1fr;}
 }
 </style>
 </head>
