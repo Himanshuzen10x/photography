@@ -1010,6 +1010,14 @@ mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => 
   burger.classList.remove('is-open');
   document.body.classList.remove('menu-open');
 }));
+  // closemenu0
+  mobileMenu.addEventListener('click', (e) => {
+  if(e.target === mobileMenu){
+    mobileMenu.classList.remove('open');
+    burger.classList.remove('is-open');
+    document.body.classList.remove('menu-open');
+  }
+});
 
 /* ===== Reveal on scroll ===== */
 const revealEls = document.querySelectorAll('.reveal, .gallery-item, .service-card, .test-card, .pkg-card, .why-item');
